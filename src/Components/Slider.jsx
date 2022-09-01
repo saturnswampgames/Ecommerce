@@ -63,12 +63,14 @@ const InfoContainer = styled.div`
 
 const Title = styled.h1`
     font-size: 60px;
+    color: #FFDA9F;
 `;
 const Desc = styled.p`
     margin: 15px 0;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 2px;
+    color: #ffffff;
 `;
 const Button = styled.button`
     padding: 10px;
@@ -99,7 +101,7 @@ const Slider = () => {
         </Arrow>
         <Wrapper slideIndex={slideIndex}>
             {sliderItems.map((item)=> (
-                <Slide bg={item.bg}>
+                <Slide bg={item.bg} key={item.id}>
                 <ImgContainer>
                     <Image src={item.Image}/>
                 </ImgContainer>
